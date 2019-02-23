@@ -1,5 +1,7 @@
 # Mapper [![Build Status](https://travis-ci.com/BoShurik/mapper.svg?branch=master)](https://travis-ci.com/BoShurik/mapper)
 
+Library for mapping given object to another (e.g. to DTO and back)
+
 ## Usage
 
 ```php
