@@ -1,0 +1,25 @@
+{
+    "name": "boshurik/mapper",
+    "description": "Mapper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BoShurik",
+            "email": "boshurik@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "BoShurik\\Mapper\\": "src/"
+        }
+    },
+    "autoload-dev":  {
+        "psr-4": {
+            "BoShurik\\Mapper\\Tests\\": "tests/"
+        }
+    }
+}
