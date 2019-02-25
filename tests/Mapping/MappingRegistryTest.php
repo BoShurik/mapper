@@ -50,4 +50,14 @@ class MappingRegistryTest extends TestCase
         $registry = new MappingRegistry();
         $registry->get(User::class, UserDto::class);
     }
+
+    public function testPartialNoMappingException()
+    {
+        $this->expectException(NoMappingException::class);
+
+        $registry = new MappingRegistry();
+        $registry->add(User::class, UserDto::class, function(){});
+
+        $registry->get(User::class, 'no');
+    }
 }
