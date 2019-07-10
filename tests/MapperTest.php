@@ -24,10 +24,10 @@ class MapperTest extends TestCase
         $registry = new MappingRegistry();
         $registry->add(User::class, UserDto::class,
             function(User $user, MapperInterface $mapper, array $context) use ($dto) {
-                $this->assertArrayHasKey(Mapper::DESTINATION_CONTEXT, $context);
+                $this->assertArrayHasKey(MapperInterface::DESTINATION_CONTEXT, $context);
                 $this->assertArrayHasKey('key', $context);
 
-                $this->assertEquals($dto, $context[Mapper::DESTINATION_CONTEXT]);
+                $this->assertEquals($dto, $context[MapperInterface::DESTINATION_CONTEXT]);
                 $this->assertEquals('item', $context['key']);
 
                 return new UserDto();

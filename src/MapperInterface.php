@@ -9,6 +9,8 @@ namespace BoShurik\Mapper;
 
 interface MapperInterface
 {
+    public const DESTINATION_CONTEXT = '__destination';
+
     /**
      * @param object $source
      * @param object|string $destination

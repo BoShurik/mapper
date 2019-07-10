@@ -11,8 +11,6 @@ use BoShurik\Mapper\Mapping\MappingRegistry;
 
 class Mapper implements MapperInterface
 {
-    public const DESTINATION_CONTEXT = '__destination';
-
     /**
      * @var MappingRegistry
      */
@@ -30,7 +28,7 @@ class Mapper implements MapperInterface
     {
         $mapping = $this->registry->get($source, $destination);
         if (is_object($destination)) {
-            $context[self::DESTINATION_CONTEXT] = $destination;
+            $context[MapperInterface::DESTINATION_CONTEXT] = $destination;
         }
 
         return $mapping($source, $this, $context);
