@@ -12,10 +12,7 @@ interface MapperInterface
     public const DESTINATION_CONTEXT = '__destination';
 
     /**
-     * @param object $source
      * @param object|string $destination
-     * @param array $context
-     * @return object
      */
     public function map(object $source, $destination, array $context = []): object;
 }

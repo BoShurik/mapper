@@ -19,11 +19,6 @@ class MappingRegistry
         $this->mapping = [];
     }
 
-    /**
-     * @param string $source
-     * @param string $destination
-     * @param callable $mapping
-     */
     public function add(string $source, string $destination, callable $mapping): void
     {
         $this->mapping[$source][$destination] = $mapping;
@@ -32,7 +27,6 @@ class MappingRegistry
     /**
      * @param object|string $source
      * @param object|string $destination
-     * @return callable
      */
     public function get($source, $destination): callable
     {
